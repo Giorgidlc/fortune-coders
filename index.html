@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Funcionamiento JS</title>
 </head>
 
 <body>
-   <!--<canvas id=c></canvas>-->
-       <input type="text" id="input_name">
-    <button onclick="agregarPersona()">Agregar</button>
-    <button onclick="sorteo()">Sortear</button>
-    <ul id="participantes"> Personas Participantes</ul>
-    <ul id ="listaParticipantesSorteados">Personas Sorteadas</ul>
-    <button onclick="reset()"> Reiniciar Sorteo</button>
+    <div class="contenedorInput">
+       <label for="name">Ingresa un nombre:</label><br>
+       <input type="text" id="name" name="name">
+       <button onclick="addCoders()" class="btn--add">Agregar</button>
+     </div>
+     <div class="contenedorListas">
+       <ul class="listaCoders"></ul>
+       <ul class="listaWinners"></ul>
+     </div>
+     <button data-action="sortear" class="btn--sortear">Sortear</button>
+     <button data-action="resetear" class="btn--reset">Resetear</button>
+     
+     <script src="main.js"></script>
 
-    
-    <script src="/main.js"></script>
-    <script src="/fireworks.js"></script>
-</body>
+   </body>
 </html>
