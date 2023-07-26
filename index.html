@@ -8,12 +8,13 @@
 </head>
 
 <body>
+  <div class=" contenedor__main"> <img src="images/logo-fortuneCoders.png">
     <div class="contenedorInput">
-       <label for="name">Ingresa un nombre:</label><br>
-       <input type="text" id="name" name="name">
-       <button onclick="addCoders()" class="btn--add">Agregar</button>
-     </div>
-     <div class="contenedorListas">
+        <label for="name">Ingresa un nombre:</label><br>
+        <input type="text" id="name" name="name">
+        <button onclick="addCoders()" class="btn--add">Agregar</button>
+    </div>
+    <div class="contenedorListas">
         <div class="titleCoders">
           <h3>Lista de coders</h3>
           <ul class="listaCoders"></ul>
@@ -22,11 +23,13 @@
           <h3>Lista de sorteados</h3>
           <ul class="listaWinners"></ul>
         </div>
-     </div>
-     <button data-action="sortear" class="btn--sortear">Sortear</button>
-     <button data-action="resetear" class="btn--reset">Resetear</button>
-     
-     <script src="main.js"></script>
+    </div>
+    <div class=" contenedor__botones">
+      <button data-action="sortear" class="btn--sortear">Sortear</button>
+      <button data-action="resetear" class="btn--reset">Resetear</button>
+    </div>
+  </div>
+      <script src="main.js"></script>
 
-   </body>
+</body>
 </html>
