@@ -1,51 +1,62 @@
-$color-purpleDark:#190028; 
-$color-purpleLight:#b82Af0;
-$color-yellow:#fee33c;
-$color-green:#5fcf11;
-$color-blueLight:#30c1fa;
-$color-red:#ff1801;
-
-.backgroundWrapper{
-	.logoWrapper{
-
+.background {
+	background-color: transparent;
+	width: 100%;
+	height: 100%;
+  }
+  
+  .input {
+	border-radius: 10px;
+	outline: 2px solid #FEBF00;
+	border: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	background-color: #e2e2e2;
+	outline-offset: 3px;
+	padding: 10px 1rem;
+	transition: 0.25s;
+  }
+  
+  .input:focus {
+	outline-offset: 5px;
+	background-color: #fff;
+  }
+  
+  .button__reset {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 6px 12px;
+	gap: 8px;
+	height: 34px;
+	width: 112px;
+	border: none;
+	background: rgba(255, 54, 43, 0.2039215686);
+	border-radius: 20px;
+	cursor: pointer;
+  }
+  
+  .lable {
+	line-height: 20px;
+	font-size: 17px;
+	color: #FF342B;
+	font-family: sans-serif;
+	letter-spacing: 1px;
+  }
+  
+  .button:hover {
+	background: rgba(255, 54, 43, 0.3215686275);
+  }
+  
+  .button:hover .svg-icon {
+	animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+	0% {
+	  transform: rotate(0deg);
 	}
-	.logoWrapper__imgEmbed{
-
+	100% {
+	  transform: rotate(-360deg);
 	}
-    .contenedorInput{
-		.contenedorInput__titleLabel{
-
-		}
-	    .contenedorInput__inputAdd{
-
-		}
-		.contenedorInput__btn--add{
-
-		}
-	}
-    .contenedorListas{
-		.contenedorListas__contentCoders{
-
-		}
-		.contenedorListas__title{
-
-		}
-		.contenedorListas__listaCoders{
-
-		}
-		.contenedorListas__titleWinners{
-
-		}
-		.contenedorListas__listaWinners{
-
-		}
-	}
-	.contenedorButtons{
-		.contenedorButtons__btn--sortear{
-
-		}
-		.contenedorButtons__btn--reset{
-
-		}
-	}
-}
+  }
+  
+  /*# sourceMappingURL=styles.css.map */

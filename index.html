@@ -8,33 +8,25 @@
 </head>
 
 <body>
-  <main class="backgroundWrapper">
-    <header class="logoWrapper">
-      <div class="logoWrapper__logo">
-        <img src="images/logo-fortuneCoders.png" class="logoWrapper__imgEmbed">
-      </div>
-    </header> 
     <div class="contenedorInput">
-      <label class="contenedorInput__titleLabel" for="name">Ingresa un nombre:</label><br>
-      <input class="contenedorInput__inputAdd" type="text" id="name" name="name">
-      <button onclick="addCoders()" class="contenedorInput__btn--add">Agregar</button>
-    </div>
-    <div class="contenedorListas">
-        <div class="contenedorListas__contentCoders">
-          <h3 class="contenedorListas__title">Lista de coders</h3>
-          <ul class="contenedorListas__listaCoders"></ul>
+       <label for="name">Ingresa un nombre:</label><br>
+       <input type="text" id="name" name="name">
+       <button onclick="addCoders()" class="btn--add">Agregar</button>
+     </div>
+     <div class="contenedorListas">
+        <div class="titleCoders">
+          <h3>Lista de coders</h3>
+          <ul class="listaCoders"></ul>
         </div>
-        <div class="contenedorListas__titleWinners">
-          <h3 class="contenedorListas__title">Lista de sorteados</h3>
-          <ul class="contenedorListas__listaWinners"></ul>
+        <div class="titleWinners">
+          <h3>Lista de sorteados</h3>
+          <ul class="listaWinners"></ul>
         </div>
-    </div>
-    <div class="contenedorButtons">
-      <button data-action="sortear" class="contenedorButtons__btn--sortear">Sortear</button>
-      <button data-action="resetear" class="contenedorButtons__btn--reset">Resetear</button>
-    </div>
-  </main>
-    <script src="main.js"></script>
-  
-</body>
+     </div>
+     <button data-action="sortear" class="btn--sortear">Sortear</button>
+     <button data-action="resetear" class="btn--reset">Resetear</button>
+     
+     <script src="main.js"></script>
+
+   </body>
 </html>
