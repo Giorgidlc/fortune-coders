@@ -1,0 +1,214 @@
+$color-purpleDark: #190028;
+$color-purple: #B82AF0;
+$color-yellow: #FEE33C;
+$color-green: #5FCF11;
+$color-lightBlue: #30C1FA;
+$color-red: #FF1801;
+
+/* LayOut Home */
+
+.pageHomeWrap {
+   display: grid;
+   height: 100vh;
+   background-color: $color-green; 
+   background-image: url('/images/patron-fondo.svg');
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr 2fr 2fr 1fr 1fr 1fr;
+   grid-template-areas: 
+   "header-home"
+   "logo"
+   "coders"
+   "input"
+   "btn-raffle"
+   "nav";
+}
+
+/* Header */
+.header-home {
+    grid-area: header-home;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-purpleDark;
+}
+
+.header-home__title {
+    font: 700 2rem 'Raleway', sans-serif;
+    color: white;
+}
+
+/* Sección Logo */
+
+.logo {
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo__imgLogo {
+    display: flex;
+    width: 17rem;
+}
+
+.imgEmbed {
+    flex-grow: 1;
+    width: 0;
+    object-fit: contain;
+}
+
+/* Sección Coders */
+
+.coders {
+    grid-area: coders;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.8rem;
+}
+
+.coders__contentTitleCoders {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-purpleDark;
+    border-radius: 30px;
+    width: 20rem;
+    height: 2.5rem;
+
+}
+
+.coders__titleCoders {
+    display: flex;
+    color: $color-yellow;
+    font: 700 1rem 'Raleway', sans-serif;
+}
+
+.coders__contentListCoders {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    height: 12.4rem;
+    gap: 1rem;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    border-radius: 0.625rem;
+    border: 0px solid $color-purple;
+    background: radial-gradient(58.49% 35.61% at 50.00% 50.00%, rgba(25, 0, 40, 0.00) 0%, rgba(25, 0, 40, 0.15) 99.99%, rgba(25, 0, 40, 0.15) 100%);
+    backdrop-filter: blur(2px);
+    padding: 0.6rem;
+}
+
+.coders__contentListCoders-listCoders {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+li {
+    display: inline-flex;
+    width: 18.75rem;
+    height: 2rem;
+    border-radius: 30px;
+    border: solid 1px #fff;
+    background-color: $color-purple;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem; 
+    font: 500 1rem 'Raleway', sans-serif;
+    color: white;
+}
+
+button{
+    background: transparent;
+    border-style: none;
+    background-position: center;
+    background-image: url('/images/btn-eliminar.svg');
+    background-repeat: no-repeat;
+    width: 2rem;
+    height: 2rem;
+
+
+}
+
+
+/* Sección Input */
+
+.contentInput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentInput__label{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.contentInput__input {
+    width: 15.5rem;
+    height: 3rem;
+    border-radius: 10px 0 0 10px;
+    border: 3px solid $color-lightBlue;
+    padding-left: 1rem;
+    font: 200 italic 1rem 'Raleway', sans-serif;
+    
+}
+
+.contentInput__btnAdd {
+    background-image: url(/images/bnt-plus-add.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 3.47rem;
+    height: 3.47rem;
+    border-radius: 0 10px 0 0;
+    border: 3px solid $color-lightBlue;
+    background-color: $color-lightBlue;
+    
+}
+
+/* Botón Sortear */
+
+.buttonRaffle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.buttonRaffle__btn {
+    background: transparent;
+    border: none;
+    background-repeat: no-repeat;
+    background-image: url('/images/bnt-sortear.svg');
+    width: 16rem;
+    height: 5rem;
+    color: $color-yellow;
+    font: 700 1.75rem 'Raleway', sans-serif;
+    padding-bottom: 0.5rem;
+}
+
+
+/* Footer Nav */
+
+.nav {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #FFF;
+    background: rgba(25, 0, 40, 0.20);
+}
+
+.nav__contentNav {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+}
+
+.imgEmbed--btn-home {
+    filter: invert(100%) url(#fff-filter);
+}
