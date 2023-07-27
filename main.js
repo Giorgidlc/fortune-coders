@@ -1,3 +1,8 @@
+function playAudio() {
+  var audio = document.getElementById("btnGetStartAudio");
+  audio.play();
+}
+
 let coders = [];
 let winners = [];
 
