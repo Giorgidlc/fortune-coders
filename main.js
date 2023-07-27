@@ -1,5 +1,5 @@
 let coders = [];
-/* let winners = []; */
+let winners = [];
 
 function addCoders() {
   const coder = document.getElementById("name").value;
@@ -13,24 +13,75 @@ function addCoders() {
     document.getElementById("name").value = "";
   }
 }
+
 function deleteCoder(index) {
   coders.splice(index, 1);
   updateCodersList(); // Actualizar la lista de coders
 }
+
 function updateCodersList() {
-  const listaCoders = document.querySelector(".coders__contentListCoders-listCoders");
-  listaCoders.innerHTML = ""; // Limpiar la lista antes de actualizarla
+  const listCoders = document.querySelector(".coders__contentListCoders-listCoders");
+  listCoders.innerHTML = ""; // Limpiar la lista antes de actualizarla
+
   for (let i = 0; i < coders.length; i++) {
     const coder = coders[i];
-    const li = document.createElement("li");
-    li.textContent = coder;
+    const list = document.createElement("li");
+    list.textContent = coder;
     const deleteButton = document.createElement("button");
-    deleteButton.textContent = "Eliminar";
     deleteButton.addEventListener("click", function () {
       deleteCoder(i);
     });
-    li.appendChild(deleteButton);
-    listaCoders.appendChild(li);
+    list.appendChild(deleteButton);
+    listCoders.appendChild(list);
     
   }
 }
+
+function sortear() { // Función para sortear nombre
+  if (coders.length === 0) {
+    alert("No hay nombres que sortear");
+    return;
+  }
+  const index = Math.floor(Math.random() * coders.length);
+  const winner = coders[index];
+  console.log(`Ganador: ${winner}`);
+  winners.push(winner);
+  document.querySelector(".listaWinners").innerHTML += `<li>${winner}</li>`;
+  coders.splice(index, 1);
+  updateCodersList(); // Actualizar la lista de coders después de sortear
+  updateWinnersList();
+  return winner;
+};
+
+function deleteWinner(index) {
+  winners.splice(index, 1);
+  updateWinnersList(); // Actualizar la lista de coders
+}
+function updateWinnersList() {
+  const listaWinners = document.querySelector(".listaWinners");
+  listaWinners.innerHTML = ""; // Limpiar la lista antes de actualizarla
+
+  for (let i = 0; i < winners.length; i++) {
+    const winner = winners[i];
+    const li = document.createElement("li");
+    li.textContent = winner;
+    const deleteButton = document.createElement("button");
+    deleteButton.addEventListener("click", function () {
+      deleteWinner(i);
+    });
+    li.appendChild(deleteButton);
+    listaWinners.appendChild(li);
+    
+  }
+}
+
+const buttonSortear = document.querySelector("button[data-action='sortear']");
+buttonSortear.addEventListener("click", sortear);
+
+const buttonResetear = document.querySelector("button[data-action='resetear']");
+buttonResetear.addEventListener("click", function () {
+  coders = [];
+  winners = [];
+  document.querySelector(".contentInput__btnAdd").innerHTML = "";
+  document.querySelector(".listaWinners").innerHTML = "";
+});
