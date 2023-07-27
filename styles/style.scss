@@ -37,7 +37,7 @@ $color-red: #FF1801;
         display: flex;
         position: absolute;
         width: 20rem;
-        top: 6rem;
+        top: 0rem;
     
     }
     
@@ -46,37 +46,70 @@ $color-red: #FF1801;
         position: absolute;
         justify-content: space-between;
         width: 21rem;
-        top: 30rem;
+        top: 0rem;
            
     }
     .logoWrapper__towers--tower1 {
         display: inline-flex;
-        width: 6rem;
+        width: 10rem;
+        animation: zoom 5s infinite;
+        align-items: stretch;
     }
+    
+    @keyframes zoom {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
     
     .logoWrapper__towers--tower2 {
         display: inline-flex;
-        width: 6rem;
-    }
+        width: 10rem;
+        animation: zoom 5s infinite;
+          }
+          
+          @keyframes zoom {
+            0% {
+              transform: scale(1);
+            }
+            50% {
+              transform: scale(1.2);
+            }
+            100% {
+              transform: scale(1);
+            }
+          }}
+    
     
     .logoWrapper__mainLogo {
         display: flex;
         position: absolute;
         width: 21rem;
-    }
-    
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+}
+
     .logoWrapper__lantern {
         display: flex;
         position: absolute;
         justify-content: space-between;
         width: 21rem;
-        top: 25.1rem;
+        top: 22rem;
+        
     }
     
     .logoWrapper__lantern--lantern1 {
         display: inline-flex;
         width: 5rem;
         padding: 0px 0 10rem 1.3rem;
+        
     
     }
     
@@ -100,7 +133,8 @@ $color-red: #FF1801;
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        padding-bottom: 11rem;
+        padding-bottom: 2rem;
+        
     }
     
     .btnGetStart__button {
@@ -125,7 +159,6 @@ $color-red: #FF1801;
         
     }
     
-    }
 
 @media only screen and (max-width: 768px) {
 
@@ -149,7 +182,7 @@ $color-red: #FF1801;
 .logoWrapper {
     grid-area: header;
     display: inline-flex;
-   
+
     justify-content: center;
     align-items: center;
 }

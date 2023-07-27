@@ -40,7 +40,8 @@
 .imgEmbed {
   flex-grow: 1;
   width: 0;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 /* Sección Winners */
@@ -80,7 +81,8 @@
   border-radius: 0.625rem;
   border: 0px solid #B82AF0;
   background: radial-gradient(58.49% 35.61% at 50% 50%, rgba(25, 0, 40, 0) 0%, rgba(25, 0, 40, 0.15) 99.99%, rgba(25, 0, 40, 0.15) 100%);
-  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
   padding: 0.6rem;
 }
 
@@ -154,6 +156,4 @@ button {
 
 .imgEmbed--btn-home {
   filter: invert(100%) url(#fff-filter);
-}
-
-/*# sourceMappingURL=style-result.css.map */
+}/*# sourceMappingURL=style-result.css.map */
