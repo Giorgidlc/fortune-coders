@@ -1,0 +1,104 @@
+$color-purpleDark: #190028;
+$color-purple: #B82AF0;
+$color-yellow: #FEE33C;
+$color-green: #5FCF11;
+$color-lightBlue: #30C1FA;
+$color-red: #FF1801;
+
+/* LayOut Win */
+
+.pageWinWrap {
+    display: grid;
+    height: 100vh;
+    background-color: $color-purpleDark; 
+    background-image: url('/images/patron-fondo.svg');
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas: 
+    "header-win"
+    "graphicLogo"
+    "nav-footer";
+    }
+
+/* Header */
+.header-win {
+    grid-area: header-win;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-purpleDark;
+}
+
+.header-win__title {
+    font: 700 2rem 'Raleway', sans-serif;
+    color: white;
+}
+
+/* Sección Logo */
+
+.graphicLogo {
+    grid-area: graphicLogo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.graphicLogo__imgLogo {
+    display: flex;
+    width: 17rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgEmbed {
+    flex-grow: 1;
+    width: 0;
+    object-fit: contain;
+}
+
+/* Botón página siguiente */
+
+.contentBtnNext {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0rem 1.875rem;
+    border: 6px solid #FFF;
+    background: #30C1FA; 
+}
+
+.btn-nextPage {
+    background-image: url(/images/arrow-getStart.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 3.47rem;
+    height: 3.47rem;
+    border-radius: 30px 30px 30px 30px;
+    border: 3px solid $color-lightBlue;
+    background-color: $color-lightBlue;
+    
+}
+
+/* Footer Nav */
+
+.nav-footer {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #FFF;
+    background: rgba(25, 0, 40, 0.20);
+}
+
+.nav-footer__contentNav {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+}
+
+.imgEmbed--btn-home {
+    filter: invert(100%) url(#fff-filter);
+}

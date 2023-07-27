@@ -71,7 +71,8 @@
 .image__embed {
   flex-grow: 1;
   width: 0;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 /* btn-start */
@@ -118,6 +119,4 @@
     object-fit: cover;
 
 }
- */
-
-/*# sourceMappingURL=style.css.map */
+ *//*# sourceMappingURL=style.css.map */
