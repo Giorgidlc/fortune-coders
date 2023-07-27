@@ -1,0 +1,18 @@
+*Confeti ejemplos
+
+https://confettijs.org/
+https://libreriasjs.com/libreria-javascript-efecto-confeti-canvas-confetti/
+https://confetti.js.org/# /*(importante)*/
+https://www.cssscript.com/confetti-falling-animation/
+
+-1- https://www.npmjs.com/package/canvas-confetti /*Con el de abajo*/
+-2- https://www.kirilv.com/canvas-confetti/ /*(importante)*/
+
+https://www.npmjs.com/package/js-confetti /*(PUEDE CAMBIAR CONFETTI POR emojis!!!! Imaginad gatitos de la suerte!!!)*/
+https://www.cssscript.com/demo/confetti-falling-animation/
+
+*Reel ejemplos
+
+
+*Javascript ejemplos
+http://cheatsheets.shecodes.io/javascript
