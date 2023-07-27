@@ -7,37 +7,36 @@ $color-red: #FF1801;
 
 /* LayOut Home */
 
-.pageHomeWrap {
-   display: grid;
-   height: 100vh;
-   background-color: $color-green; 
-   background-image: url('/images/patron-fondo.svg');
-   grid-template-columns: 1fr;
-   grid-template-rows: 1fr 2fr 2fr 1fr 1fr 1fr;
-   grid-template-areas: 
-   "header-home"
-   "logo"
-   "coders"
-   "input"
-   "btn-raffle"
-   "nav-footer";
-}
+.pageResultWrap{
+    display: grid;
+    height: 100vh;
+    background-color: $color-yellow; 
+    background-image: url('/images/patron-fondo.svg');
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 2fr 1fr 1fr;
+    grid-template-areas: 
+    "header-result"
+    "logo"
+    "winners"
+    "btn-reset"
+    "nav-home";
+ }
+ 
+ /* Header */
+ .header-result{
+     grid-area: header-result;
+     display: inline-flex;
+     justify-content: center;
+     align-items: center;
+     background-color: $color-purpleDark;
+ }
+ 
+ .header-result__title {
+     font: 700 2rem 'Raleway', sans-serif;
+     color: white;
+ }
 
-/* Header */
-.header-home {
-    grid-area: header-home;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $color-purpleDark;
-}
-
-.header-home__title {
-    font: 700 2rem 'Raleway', sans-serif;
-    color: white;
-}
-
-/* Sección Logo */
+ /* Sección Logo */
 
 .logo {
     grid-area: logo;
@@ -57,10 +56,10 @@ $color-red: #FF1801;
     object-fit: contain;
 }
 
-/* Sección Coders */
+/* Sección Winners */
 
-.coders {
-    grid-area: coders;
+.winners {
+    grid-area: winners;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,7 +67,7 @@ $color-red: #FF1801;
     gap: 1.8rem;
 }
 
-.coders__contentTitleCoders {
+.winners__contentTitleWinners {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,13 +78,13 @@ $color-red: #FF1801;
 
 }
 
-.coders__titleCoders {
+.winners__titleWinners {
     display: flex;
     color: $color-yellow;
     font: 700 1rem 'Raleway', sans-serif;
 }
 
-.coders__contentListCoders {
+.winners__contentListWinners {
     display: flex;
     flex-direction: column;
     width: 20rem;
@@ -100,7 +99,7 @@ $color-red: #FF1801;
     padding: 0.6rem;
 }
 
-.coders__contentListCoders-listCoders {
+.winners__contentListWinners-listWinners {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -130,57 +129,18 @@ button{
     width: 2rem;
     height: 2rem;
 
-
 }
 
+/* Botón Resetear */
 
-/* Sección Input */
-
-.contentInput {
-    grid-area: input;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.contentInput__label{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.contentInput__input {
-    width: 15.5rem;
-    height: 3rem;
-    border-radius: 10px 0 0 10px;
-    border: 3px solid $color-lightBlue;
-    padding-left: 1rem;
-    font: 200 italic 1rem 'Raleway', sans-serif;
-    
-}
-
-.contentInput__btnAdd {
-    background-image: url(/images/bnt-plus-add.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 3.47rem;
-    height: 3.47rem;
-    border-radius: 0 10px 0 0;
-    border: 3px solid $color-lightBlue;
-    background-color: $color-lightBlue;
-    
-}
-
-/* Botón Sortear */
-
-.buttonRaffle {
-    grid-area: btn-raffle;
+.buttonReset {
+    grid-area: btn-reset;
     display: inline-flex;
     justify-content: center;
     align-items: center; 
 }
 
-.buttonRaffle__btn {
+.buttonReset__btn {
     background: transparent;
     border: none;
     background-repeat: no-repeat;
@@ -195,7 +155,8 @@ button{
 
 /* Footer Nav */
 
-.nav-footer {
+.nav {
+    grid-area: nav-home;
     display: inline-flex;
     justify-content: center;
     align-items: center;
