@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/styles/css/reset.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/css/style-home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Raleway:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <title>Home</title>
+</head>
+<body>
+    <div class="pageHomeWrap">
+        <header class="header-home">
+            <h1 class="header-home__title">Welcome</h1>
+        </header>
+        <main class="logo">
+            <picture class="logo__imgLogo">
+                <img src="images/logo-fortuneCoders.png" alt="" class="imgEmbed">
+            </picture>
+        </main>
+        <section class="coders">
+            <div class="coders__contentTitleCoders">
+                <h3 class="coders__titleCoders">PARTICIPANTES</h3>
+            </div>
+            <div class="coders__contentListCoders">
+                <ul class="coders__contentListCoders-listCoders"></ul>
+            </div>
+        </section>
+        <section class="contentInput">
+            <div class="contentInput__label">
+                <label for="name" class="contentInput__label-title"></label>
+                <input type="text" id="name" name="name" placeholder="Agrega un nuevo participante" class="contentInput__input">
+                <button onclick="addCoders()" class="contentInput__btnAdd"></button>
+            </div>
+        </section>
+        <section class="buttonRaffle">
+            <button data-action="sortear" class="buttonRaffle__btn">Sortear</button>
+        </section>
+        <section class="nav">
+            <nav class="nav__contentNav">
+                <img src="/images/btn-home.svg" alt="botón home" class="imgEmbed--btn-home" type="image/svg+xml">
+            </nav>
+        </section>
+    </div>
+    <script src="/JSON/main.js"></script>
+</body>
+</html>
