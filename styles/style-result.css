@@ -4,7 +4,7 @@
   display: grid;
   height: 100vh;
   background-color: #FEE33C;
-  background-image: url("/images/patron-fondo.svg");
+  background-image: url("/images/patron-fondoYellow.svg");
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 2fr 2fr 1fr 1fr;
   grid-template-areas: "header-result" "logo" "winners" "btn-reset" "nav-home";
