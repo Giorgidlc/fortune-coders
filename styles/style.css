@@ -7,6 +7,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: 2fr 1fr;
   grid-template-areas: "header" "btn-start";
+  position: relative;
 }
 
 /* Header */
@@ -15,6 +16,20 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+/* Animación para las nubes */
+@keyframes cloudAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50px); /* Ajusta el valor según el desplazamiento deseado hacia la derecha */
+  }
+  100% {
+    transform: translateX(0); /* Vuelve a la posición inicial (izquierda) */
+  }
 }
 
 .logoWrapper__cloud {
@@ -22,7 +37,10 @@
   position: absolute;
   width: 20rem;
   top: 6rem;
+  animation: cloudAnimation 5s infinite alternate; /* 10s es la duración de la animación, infinite indica que se repite indefinidamente y alternate hace que la animación se ejecute en sentido contrario en cada ciclo, para suavizar el movimiento. */
 }
+
+
 
 .logoWrapper__towers {
   display: flex;
@@ -44,9 +62,25 @@
 
 .logoWrapper__mainLogo {
   display: flex;
-  position: absolute;
   width: 21rem;
+  position: absolute;
+  z-index: 2;
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.8);
+  background: radial-gradient(circle, rgba(255, 0, 0, 0.8), rgba(255, 165, 0, 0.8), rgba(255, 255, 0, 0.8), rgba(0, 128, 0, 0.8), rgba(0, 0, 255, 0.8), rgba(75, 0, 130, 0.8), rgba(238, 130, 238, 0.8));
 }
+
+
+/* Animación "swing" para los farolillos */
+@keyframes lanternAnimation {
+  0%, 100% {
+    transform: rotateZ(0);
+  }
+  25% {
+    transform: rotateZ(5deg); /* Ajusta el ángulo de oscilación deseado */
+  }
+  75% {
+    transform: rotateZ(-5deg); /* Ajusta el ángulo de oscilación deseado */
+  }
 
 .logoWrapper__lantern {
   display: flex;
@@ -54,20 +88,24 @@
   justify-content: space-between;
   width: 21rem;
   top: 25.1rem;
+  
 }
 
 .logoWrapper__lantern--lantern1 {
   display: inline-flex;
   width: 5rem;
   padding: 0px 0 10rem 1.3rem;
+  top:0;
+  animation: lanternAnimation 4s infinite cubic-bezier(0.25, 0.1, 0.25, 1); /* 4s es la duración de la animación, infinite indica que se repite indefinidamente, y cubic-bezier define la curva de tiempo para lograr un efecto de oscilación suave */
 }
 
 .logoWrapper__lantern--lantern2 {
   display: inline-flex;
   width: 6rem;
   padding: 0 1rem 8rem 0rem;
+  top 0;
+  animation: lanternAnimation 6s infinite cubic-bezier(0.25, 0.1, 0.25, 1); /* 4s es la duración de la animación, infinite indica que se repite indefinidamente, y cubic-bezier define la curva de tiempo para lograr un efecto de oscilación suave */
 }
-
 .image__embed {
   flex-grow: 1;
   width: 0;
